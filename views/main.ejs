@@ -4,23 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+ 
+      body {
+        background: linear-gradient(to top right,#eba426,#ff3468);
+        font-size: larger;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-control {
+        justify-content: center;
+        align-items: center;
+      }
+      .checked {
+        color: orange;
+      }
+      .fa-star {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1>Use this Form to create a new Char INPUT HIS NAME</h1>
-    <form action="create" method="post">
-      <input type="text" name="name" />
-      <button type="submit">Submit</button>
-    </form>
-    <h1>ADD EVENT NAME AND GOLD EXP CC gained</h1>
-    <form action="addEvenet" method="post">
-      <input type="text" name="char" placeholder="Char name (winter)" />
-      <input type="text" name="event" placeholder="EVENT Name" />
-      <input type="number" name="gold" placeholder="GOLD" />
+    <form action="/comment" method="post">
+      <div class="form-group">
+        <label for="good">What Went Well?</label>
+        <textarea
+          class="form-control"
+          id="good"
+          name="good"
+          rows="3"
+          cols="80"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="bad">What could go better?</label>
+        <textarea
+          class="form-control"
+          id="bad"
+          name="bad"
+          cols="20"
+          rows="3"
+        ></textarea>
+      </div>
+      <div class="form-group">
+      <label for="good">Overall rating?</label>
 
-      <input type="number" name="exp" placeholder="exp" />
-
-      <input type="number" name="cc" placeholder="cc" />
-      <button type="submit">Submit</button>
-    </form>
+      <input id='overall' name='rating' type="number" placeholder="From 1 to 10 ">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
   </body>
+  <script></script>
 </html>
