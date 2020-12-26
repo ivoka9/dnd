@@ -23,7 +23,7 @@ app.post("/comment", async (req, res) => {
   const char = await db.Char.create(newCooment);
   await char.save();
 
-  res.send("Thank you");
+  res.json("Thank you");
 });
 
 app.listen(PORT, () => console.log("server online"));
