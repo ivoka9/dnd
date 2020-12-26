@@ -20,7 +20,7 @@ app.post("/comment", async (req, res) => {
     bad: req.body.bad,
     rating: Number(req.body.rating),
   };
-  const char = await db.Char.create(newCooment);
+  const char = await db.Comment.create(newCooment);
   await char.save();
 
   res.json("Thank you");

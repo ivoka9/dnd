@@ -13,5 +13,5 @@ mongoose
   .then(console.log("db Working"));
 
 module.exports = {
-  Char: require("./CharSchema"),
+  Comment: require("./CharSchema"),
 };
