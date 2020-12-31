@@ -14,6 +14,12 @@ app.get("/", (req, res) => {
   res.render("main.ejs");
 });
 
+app.get("/all", async (req, res) => {
+  const all = await db.Comment.find({});
+  console.log(all);
+  res.render("all.ejs", { all: all });
+});
+
 app.post("/comment", async (req, res) => {
   const newCooment = {
     good: req.body.good,
@@ -26,4 +32,4 @@ app.post("/comment", async (req, res) => {
   res.json("Thank you");
 });
 
-app.listen(PORT, () => console.log("server online"));
+app.listen(PORT, () => console.log("server online PORT: " + PORT));
